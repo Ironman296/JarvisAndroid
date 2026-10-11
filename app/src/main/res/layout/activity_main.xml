@@ -79,7 +79,7 @@
         android:contentDescription="@string/btn_start"
         app:backgroundTint="@color/primary"
         app:tint="@color/white"
-        app:fabSize="large"
+        app:fabSize="normal"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@id/commandHint"
         app:layout_constraintStart_toStartOf="parent"
