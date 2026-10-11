@@ -54,10 +54,19 @@ jobs:
 
       # ── 6. Build the debug APK ───────────────────────────────
       - name: Build Debug APK
-        run: gradle assembleDebug --no-daemon --stacktrace
+        run: |
+          gradle assembleDebug --no-daemon --stacktrace > build_log.txt 2>&1 || (tail -n 200 build_log.txt && exit 1)
+
+      - name: Upload Build Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build_log.txt
 
       # ── 7. Upload APK as a downloadable artifact ─────────────
       - name: Upload Debug APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: jarvis-android-debug-apk
