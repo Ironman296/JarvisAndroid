@@ -33,11 +33,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # ── 3. Set up Gradle with caching ────────────────────────
+      # ── 3. Set up Gradle ─────────────────────────────────────
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: '8.5'
+          cache-disabled: true
 
       # ── 4. Accept Android SDK licenses ───────────────────────
       - name: Accept Android SDK licenses
@@ -53,7 +54,7 @@ jobs:
 
       # ── 6. Build the debug APK ───────────────────────────────
       - name: Build Debug APK
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       # ── 7. Upload APK as a downloadable artifact ─────────────
       - name: Upload Debug APK

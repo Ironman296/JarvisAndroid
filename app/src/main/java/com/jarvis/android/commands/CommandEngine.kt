@@ -110,7 +110,7 @@ class CommandEngine(private val context: Context) {
             for (phrase in sortedPhrases) {
                 if (normalized.contains(phrase)) {
                     return try {
-                        command.action(context)
+                        command.action()
                     } catch (e: Exception) {
                         "Sorry, I couldn't do that: ${e.message}"
                     }

@@ -14,5 +14,5 @@ data class Command(
     val name: String,
     val phrases: List<String>,
     val description: String,
-    val action: (Context) -> String
+    val action: () -> String
 )
