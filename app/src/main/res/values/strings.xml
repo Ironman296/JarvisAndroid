@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jarvis</string>
+    <string name="status_idle">Ready</string>
+    <string name="status_listening">● Listening…</string>
+    <string name="status_processing">Processing…</string>
+    <string name="status_error">Error</string>
+    <string name="status_permission_denied">Microphone permission denied</string>
+    <string name="permission_rationale">Microphone access is required for voice commands.\nPlease grant permission in Settings.</string>
+    <string name="hint_speech">Tap the mic and speak a command</string>
+    <string name="btn_start">Start listening</string>
+    <string name="btn_stop">Stop listening</string>
+    <string name="command_hints">Try saying:\n\"calculator kholo\" · \"open settings\"\n\"torch on\" · \"time kya hai\" · \"battery status\"</string>
+</resources>
